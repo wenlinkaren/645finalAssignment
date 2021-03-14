@@ -1,0 +1,67 @@
+header {
+    @include break(960px) {
+        @include header("#{imagesPath}/#{imageHeader}", 4em, 2.5em, 2em);
+        h3 {
+            color: $grey;
+        }
+      }
+    @include break(768px, 959px) {
+        @include header("#{imagesPath}/#{imageHeader}", 3em, 1.5em, 2em);
+        h3 {
+            color: $grey;
+        }
+    }
+    @include break(460px, 767px) {
+        @include header("#{imagesPath}/#{imageHeader}", 2em, 1em, 1.5em);
+        header img	{
+            margin-bottom: 100px;
+        }
+        h3 {
+            color: $grey;
+        }
+        
+    }
+    @include break(300px, 459px) {
+        @include header("#{imagesPath}/#{imageHeader}", 1.4em, 1.4em, 1em);
+        h1 {
+            margin-bottom:20px;
+        }
+        header img  {
+            margin-bottom: 80px;
+        }
+        h3 {
+            color: $white;
+        }
+    }
+    h1 {
+        color: $red;
+        font-weight: $font-light;
+        line-height: 0;
+    }
+    h2 {
+        color: $white;
+        font-weight: $font-heavy;     
+        line-height: 0;
+        margin-bottom: 70px;
+    }
+    h3 {
+        font-weight: $font-medium;
+        line-height: 0;
+        margin-bottom: 50px;
+    }
+}
+
+#headline {
+    @include break(960px) {
+        @include headline($headline-background, 2.5em, 50px);
+    }
+      @include break(768px, 959px) {
+        @include headline($headline-background, 2.5em, 50px);
+      }
+      @include break(460px, 767px) {
+        @include headline($headline-background, 2em, 50px);
+      }
+      @include break(300px, 459px) {
+        @include headline($headline-background, 1.5em, 30px);
+      }
+}

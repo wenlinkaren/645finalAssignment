@@ -1,0 +1,59 @@
+figure {
+    @include break(960px) {
+        @include logo("#{imagepath}/#{imageLogo}", 400px, 190px, left, 0 50px);
+    }
+    @include break(768px, 959px) {
+        @include logo("#{imagepath}/#{imageLogo}", inherit, 140px, none, center);
+    }
+    @include break(460px, 767px) {
+        @include logo("#{imagepath}/#{imageLogo}", inherit, 140px, none, center);
+    }
+    @include break(300px, 459px) {
+        @include logo("#{imagepath}/#{imageLogo}", inherit, 100px, none, center);
+        background-size: contain;
+    }
+}
+
+nav {  
+    @include break(960px) {
+        @include nav(540px, 190px, left, right);
+        ul {
+            margin-top: 95px;
+        }
+        ul li {
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+    }
+    @include break(768px, 959px) {
+        @include nav(inherit, 50px, none, center);
+        ul {
+            margin-top: 0;
+        }
+        ul li {
+            font-size: 1em;
+            margin: 0 10px;
+        }
+    }    
+    @include break(460px, 767px) {
+        @include nav(inherit, 50px, none, center);
+        ul {
+            margin-top: 0;
+        }
+        ul li {
+            font-size: 0.8em;
+            margin: 0 5px;
+        }
+    }
+    @include break(300px, 459px) {
+        @include nav(inherit, 50px, none, center);
+        margin-bottom: 40px !important;
+        ul {
+            margin-top: 0;
+        }
+        ul li {
+            font-size: 0.8em;
+            margin: 0 5px;
+        }
+    }
+}

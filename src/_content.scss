@@ -1,0 +1,102 @@
+#content {
+    @include break(960px) {
+        @include content(940px, 20px auto);
+        #products {
+            width: (940px / 2) - (20px / 2);
+            float: left;
+            h3 {
+                color: $grey;
+                font-size: 2em;
+                font-weight: $font-medium;
+            }
+            #product1 {
+                @include article("#{imagespath}/#{imageProduct1}");
+            }
+            #product2 {
+                @include article("#{imagesPath}/#{imageProduct2}");
+            }
+        }
+        #testimonials {
+            width: 940px / 2 - 10px;
+            float: right;
+        }
+    }
+    @include break(768px, 959px) {
+         @include content(inherit, 20px auto);
+         #products {
+            width: 46%;
+            float: left;
+            margin:0 2%;
+            h3 {
+                color: $grey;
+                font-size: 2em;
+                font-weight: $font-medium;
+            }
+            #product1 {
+                @include article("#{imagespath}/#{imageProduct1}");
+            }
+            #product2 {
+                @include article("#{imagesPath}/#{imageProduct2}");
+            }
+        }
+        #testimonials {
+            width: 46%;
+            float: right;
+            margin:0 2%;
+        }
+    }
+    @include break(460px, 767px) {
+        @include content(inherit, 20px auto);
+         #products {
+            width: 96%;
+            float: none;
+            margin:0 2%;
+            h3 {
+                color: $grey;
+                font-size: 2em;
+                font-weight: $font-medium;
+            }
+            #product1 {
+                @include article("#{imagespath}/#{imageProduct1}");
+            }
+            #product2 {
+                @include article("#{imagesPath}/#{imageProduct2}");
+            }
+        }
+        #testimonials {
+            width: 96%;
+            float: none;
+            margin:0 2%;
+        }
+    }
+    @include break(300px, 459px) {
+        @include content(inherit, 20px auto);
+         #products {
+            width: 96%;
+            float: none;
+            margin:0 2%;
+            h3 {
+                color: $grey;
+                font-size: 1.6em;
+                font-weight: $font-medium;
+            }
+            #product1 {
+                margin-bottom: 40px;
+                h4 {
+                    line-height: 1em;
+                }
+            }
+            #product2 {
+                margin-bottom: 40px;
+                h4 {
+                    line-height: 1em;
+                }
+            }
+        }
+        #testimonials {
+            width: 96%;
+            float: none;
+            margin:0 2%;
+        }
+      }
+}
